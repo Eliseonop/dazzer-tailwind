@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import CardMusic from "./CardMusic";
 import { buscarMusicaName } from "../api/apiSearch";
-import "../style/components/Resultados.css";
 
 export default function Resultados({
   artistaObtenido,
@@ -31,7 +30,7 @@ export default function Resultados({
   }, [name]);
 
   return (
-    <div className="div-resultados">
+    <div className="mt-[50px] flex flex-wrap w-[970px]">
       {artistas ? (
         artistas.map((item, index) => (
           <CardMusic

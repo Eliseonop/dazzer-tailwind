@@ -1,5 +1,4 @@
 import React, { useState, useRef, useEffect } from "react";
-import "../style/components/Card.css";
 
 export default function CardMusic({
   item,
@@ -22,24 +21,35 @@ export default function CardMusic({
   }, [play]);
   // console.log(item);
   return (
-    <div className="card-div">
-      <img src={album.cover_medium} alt={title} />
+    <div className="flex w-[160px] h-[220px] flex-col justify-center items-center mt-5 mr-5 mb-[30px]  ">
+      <img
+        src={album.cover_medium}
+        alt={title}
+        width={160}
+        className="w-[160px] h-[160px] border-2  "
+      />
       <audio
         ref={audioPlay}
         id="audio"
         src={preview}
         type="audio/mpeg"
         controls
+        className="w-[150px] h-[20px] hidden"
       ></audio>
-      <button onClick={PlayPause}>
+      <button
+        onClick={PlayPause}
+        className="absolute h-[100px] w-[100px] bg-transparent border-none z-10"
+      >
         {play ? (
-          <i class="fa-solid fa-play"></i>
+          <i class="fa-solid fa-play cursor-pointer text-[50px]"></i>
         ) : (
-          <i class="fa-solid fa-pause"></i>
+          <i class="fa-solid fa-pause cursor-pointer text-[50px]"></i>
         )}
       </button>
-      <h5>{title}</h5>
-      <h6>{artist.name}</h6>
+      <div className="h-[20px]">
+        <h5 className="text-[12px] font-bold">{title}</h5>
+        <h6>{artist.name}</h6>
+      </div>
     </div>
   );
 }

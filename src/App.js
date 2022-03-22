@@ -5,6 +5,7 @@ import NavTab from "./views/NavTab";
 import Home from "./views/Home";
 import SearchProvider from "./context/SearchProvider";
 import ArtistProvider from "./context/ArtistProvider";
+import Reproductor from "./views/Reproductor";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <SearchProvider>
           <NavTab className="g" />
           <Home className="" />
+          <Reproductor />
         </SearchProvider>
       </ArtistProvider>
     </div>

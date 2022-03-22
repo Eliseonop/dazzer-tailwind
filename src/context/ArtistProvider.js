@@ -3,7 +3,7 @@ import { createContext, useContext, useState } from "react";
 export const ArtistContext = createContext();
 
 export default function ArtistProvider({ children }) {
-  const [player, setPlayer] = useState(true);
+  const [player, setPlayer] = useState(false);
   const [artist, setArtist] = useState("eminen");
   const [id, setId] = useState(737940772);
   const enviarPlayer = (valor) => {

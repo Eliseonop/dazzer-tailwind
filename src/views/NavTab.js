@@ -1,36 +1,35 @@
 import React from "react";
 import logo from "../assets/Foxbel-Music/foxbel-music.png";
-import "../style/views/NavTab.css";
 
 export default function NavTab() {
   return (
-    <div className="container-nav ">
+    <div className="h-1087 w-330 bg-dark-Red-s">
       <img
         src={logo}
         alt="logo"
         width={250}
         height={59}
-        className="div-imagen "
+        className="mt-[50px] ml-[40px] mr-[40px]"
       />
 
-      <div className="pl-8">
-        <h4 className="">Mi Libreria</h4>
+      <div className="pl-[40px] mt-[49px]">
+        <h4 className="text-white text-vd font-bold">Mi Libreria</h4>
         <ul>
-          <li className="">Recientes</li>
-          <li className="">Artistas</li>
-          <li className="">Albums</li>
-          <li className="">Canciones</li>
-          <li className="">Estaciones</li>
+          <li className="list-none text-white">Recientes</li>
+          <li className="list-none text-white">Artistas</li>
+          <li className="list-none text-white">Albums</li>
+          <li className="list-none text-white">Canciones</li>
+          <li className="list-none text-white">Estaciones</li>
         </ul>
       </div>
-      <div className="pl-8">
-        <h4 className="">Playlist</h4>
+      <div className="pl-[40px] mt-[49px]">
+        <h4 className="text-white text-vd font-bold">Playlist</h4>
         <ul>
-          <li className="">Metal</li>
-          <li className="">Playlist</li>
-          <li className="">Albums</li>
-          <li className="">Canciones</li>
-          <li className="">Estaciones</li>
+          <li className="list-none text-white">Metal</li>
+          <li className="list-none text-white">Playlist</li>
+          <li className="list-none text-white">Albums</li>
+          <li className="list-none text-white">Canciones</li>
+          <li className="list-none text-white">Estaciones</li>
         </ul>
       </div>
     </div>

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { getArtistId } from "../api/artistApi";
-import "../style/components/Artist.css";
 
 export default function Artist() {
   const [artist, setArtist] = useState([]);
@@ -15,24 +14,32 @@ export default function Artist() {
   }, []);
 
   return (
-    <div className="w-890 mx-16 mt-5 flex div-artist">
-      <div className="w-250 h-250 div-2-artist">
+    <div className="w-970 mr-auto flex ">
+      <div className="w-250 h-250">
         <img src={artist.picture_medium} alt={artist.id} />
       </div>
-      <div className="div3-artist">
+      <div className="w-640 ">
         <img
           src={artist.picture_xl}
+          className="object-cover object-center h-[250px] grayscale brightness-50 sepia hue-rotate-[-50deg] saturate-600 contrast-8 "
           alt={artist.name}
           width={642}
           height={250}
         />
-        <div className="contenido">
-          <h1 className="text-red-700 absolute top-4 left-4">{artist.name}</h1>
-          <h3>
-            Lo mejor de {artist.name} <span>{artist.nb_fan}seguidores</span>
+        <div className="absolute top-[200px] text-white ml-5 ">
+          <h1 className="text-xl">{artist.name}</h1>
+          <h3 className="font-extralight">
+            Lo mejor de {artist.name}{" "}
+            <span className="font-bold text-black ">
+              {artist.nb_fan}seguidores
+            </span>
           </h3>
-          <button>Reproducir</button>
-          <button>Seguir</button>
+          <button className="mt-14 ml-5 px-5 py-2 rounded-2xl bg-red-500 text-white border-0 transition hover:bg-transparent hover:border-2 hover:border-red-600">
+            Reproducir
+          </button>
+          <button className="mt-14 ml-5 px-5 py-2 rounded-2xl bg-red-500 text-white border-0 transition hover:bg-transparent hover:border-2 hover:border-red-600">
+            Seguir
+          </button>
         </div>
       </div>
     </div>
