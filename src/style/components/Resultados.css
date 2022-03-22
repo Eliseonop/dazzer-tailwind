@@ -1,0 +1,7 @@
+.div-resultados {
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+
+  width: 970px;
+}

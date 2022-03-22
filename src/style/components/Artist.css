@@ -1,0 +1,56 @@
+.div-artist {
+  width: 970;
+
+  margin-right: auto;
+  display: flex;
+}
+.div-2-artist {
+  width: 250px;
+  height: 250px;
+}
+.div3-artist {
+  width: 640;
+  height: 250;
+}
+.div3-artist {
+  width: 640;
+  height: 250;
+  /* background-color: red; */
+}
+.div3-artist img {
+  object-fit: cover;
+  object-position: 2;
+
+  filter: grayscale(100%) brightness(40%) sepia(100%) hue-rotate(-50deg)
+    saturate(600%) contrast(0.8);
+  /* background: linear-gradient(to right, red, #bd40a2) !important; */
+}
+.contenido {
+  position: absolute;
+  top: 200px;
+  color: white;
+  margin-left: 20px;
+}
+.contenido h3 {
+  font-size: 20px;
+  font-weight: 100;
+}
+.contenido h3 span {
+  margin-left: 10px;
+  color: black;
+  font-weight: bold;
+}
+.contenido button {
+  margin-top: 50px;
+  margin-left: 20px;
+  padding: 7px 20px;
+  border-radius: 15px;
+  background-color: #eb5757;
+  color: white;
+  border: 0;
+  transition-duration: 0.5s;
+}
+.contenido button:hover {
+  background-color: transparent;
+  border: 1px solid red;
+}
