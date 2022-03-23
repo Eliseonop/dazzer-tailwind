@@ -9,13 +9,16 @@ import Reproductor from "./views/Reproductor";
 
 function App() {
   return (
-    <div className="flex">
+    <>
       <ArtistProvider>
-        <NavTab className="g" />
-        <Home className="w-full m-auto" />
-        <Reproductor />
+        <div className="flex flex-col w-screen  lg:flex-row">
+          <NavTab />
+          <Home />
+
+          <Reproductor />
+        </div>
       </ArtistProvider>
-    </div>
+    </>
   );
 }
 

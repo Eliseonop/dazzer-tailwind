@@ -57,41 +57,46 @@ export default function Reproductor() {
   }, [valor]);
   return music ? (
     <div className="fixed h-[100px] bottom-0 z-20  bg-[#EB5757] w-screen ">
-      <img
-        src={music.album.cover_medium}
-        alt={music.title}
-        width={160}
-        className="w-[100px] h-[100px] border-0  "
-      />
-      <audio
-        ref={audioPlayer}
-        src={music.preview}
-        type="audio/mpeg"
-        controls
-      ></audio>
-      <button
-        onClick={PlayPause}
-        className="absolute top-0 left-1/2  h-[100px] w-[100px] bg-transparent text-white border-none z-10"
-      >
-        {valor ? (
-          <i className="fa-solid fa-pause cursor-pointer text-[50px]"></i>
-        ) : (
-          <i className="fa-solid fa-play cursor-pointer text-[50px]"></i>
-        )}
-      </button>
-      <span className="absolute top-1/3 right-60">🔊</span>
-      <input
-        // value={value.valor}
+      <div className="relative">
+        <img
+          src={music.album.cover_medium}
+          alt={music.title}
+          width={160}
+          className="w-[100px] h-[100px] border-0  "
+        />
+        <audio
+          ref={audioPlayer}
+          src={music.preview}
+          type="audio/mpeg"
+          controls
+        ></audio>
+        <button
+          onClick={PlayPause}
+          className="absolute top-0 left-1/4 lg:left-1/2  h-[100px] w-[100px] bg-transparent text-white border-none z-10"
+        >
+          {valor ? (
+            <i className="fa-solid fa-pause cursor-pointer text-[50px]"></i>
+          ) : (
+            <i className="fa-solid fa-play cursor-pointer text-[50px]"></i>
+          )}
+        </button>
 
-        ref={audioRef}
-        type="range"
-        max="1"
-        min="0"
-        step="0.1"
-        name="valumen"
-        className="absolute top-1/3 right-20"
-        onChange={handleChange}
-      />
+        <input
+          // value={value.valor}
+
+          ref={audioRef}
+          type="range"
+          max="1"
+          min="0"
+          step="0.1"
+          name="valumen"
+          className="absolute top-10 right-20 "
+          onChange={handleChange}
+        />
+        <span className="absolute top-7 text-white text-xl right-7">
+          <i class="fa-solid fa-music"></i>
+        </span>
+      </div>
     </div>
   ) : (
     <h1>Hola</h1>

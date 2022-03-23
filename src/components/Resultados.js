@@ -30,7 +30,7 @@ export default function Resultados({
   }, [name]);
 
   return (
-    <div className="mt-[50px] flex flex-wrap w-[970px]">
+    <div className="flex flex-wrap w-screen mb-20 lg:w-full md:px-auto ">
       {artistas ? (
         artistas.map((item, index) => (
           <CardMusic

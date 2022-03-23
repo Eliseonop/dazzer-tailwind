@@ -47,18 +47,23 @@ export default function Artist({
   };
   return (
     artistas && (
-      <div className="w-970 mr-auto flex ">
-        <div className="w-250 h-250">
-          <img src={artistas.artist.picture_medium} alt={artistas.artist.id} />
-          <button className="absolute  z-10 h-[100px] w-[100px] bg-transparent text-white border-none ">
+      <div className=" flex flex-col lg:w-full lg:flex lg:flex-row">
+        <div className="w-250 h-250 hidden lg:flex relative">
+          <img
+            src={artistas.artist.picture_medium}
+            alt={artistas.artist.id}
+            width={250}
+            className="lg:w-[250px] lg:h-[250px] "
+          />
+          <button className="absolute top-1/3 left-1/3 z-10 h-[100px] w-[100px] bg-transparent text-white border-none ">
             {artistas ? (
-              <i className="fa-solid fa-pause cursor-pointer text-[50px]"></i>
+              <i className="fa-solid fa-pause cursor-pointer text-[80px]"></i>
             ) : (
-              <i className="fa-solid fa-play cursor-pointer text-[50px]"></i>
+              <i className="fa-solid fa-play cursor-pointer text-[80px]"></i>
             )}
           </button>
         </div>
-        <div className="w-640 ">
+        <div className=" relative md:mx-auto ">
           <img
             src={artistas.artist.picture_xl}
             className="object-cover object-center h-[250px] grayscale brightness-50 sepia hue-rotate-[-50deg] saturate-600 contrast-8 "
@@ -66,8 +71,8 @@ export default function Artist({
             width={642}
             height={250}
           />
-          <div className="absolute top-[200px] text-white ml-5 ">
-            <h1 className="text-xl">{artistas.title}</h1>
+          <div className="absolute top-0 text-white ml-5 ">
+            <h1 className="text-xl mt-3">{artistas.title}</h1>
             <h3 className="font-extralight">
               Lo mejor de {artistas.artist.name}{" "}
               <span className="font-bold text-black ">

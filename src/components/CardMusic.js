@@ -21,7 +21,7 @@ export default function CardMusic({
   }, [play]);
   // console.log(item);
   return (
-    <div className="flex w-[160px] h-[220px] flex-col justify-center items-center mt-5 mr-5 mb-[30px]  ">
+    <div className="flex w-40 h-52 flex-col justify-center items-center mt-3 mr-5 mb-[30px] lg:mx-3 relative">
       <img
         src={album.cover_medium}
         alt={title}

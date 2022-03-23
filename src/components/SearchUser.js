@@ -16,21 +16,21 @@ export default function SearchUser() {
   };
   return (
     <>
-      <div className="w-870 flex h-120 items-center justify-between ">
-        <div className=" flex h-25">
-          <form onSubmit={submit}>
+      <div className="w-screen lg:w-full h-30 lg:h-[120px] items-center lg:place-content-between mb-4 flex flex-col-reverse lg:flex-row">
+        <div className=" flex  ">
+          <form onSubmit={submit} className="flex relative  ">
             <input
               placeholder="Buscar"
-              className="w-640 rounded-xl p-1 border-2"
+              className="w-56 sm:w-640 lg:w-640 h-9 rounded-xl p-1 mt-1 border-2"
               type="text"
               name="name"
               value={state.name}
               onChange={handleChange}
             />
-            <i className="fa-solid fa-magnifying-glass  relative right-5 mt-1 text-gray-600 "></i>
+            <i className="fa-solid fa-magnifying-glass  absolute right-3 mt-2 text-gray-400 "></i>
           </form>
         </div>
-        <div className="flex">
+        <div className="flex mt-2 ">
           <i className="fas fa-regular fa-user mt-1 text-red-600"></i>
           <h3 className="ml-[10px]">Francisco</h3>
         </div>
