@@ -66,7 +66,7 @@ export default function NavTab() {
         </div>
         <button onClick={toggleNav} className="absolute top-9  right-3">
           {!toggleMenu ? (
-            <i class="fa-solid fa-bars  text-xl text-white "></i>
+            <i className="fa-solid fa-bars  text-xl text-white "></i>
           ) : (
             <i className="fas fa-chevron-up fs-1 text-xl text-white "></i>
           )}

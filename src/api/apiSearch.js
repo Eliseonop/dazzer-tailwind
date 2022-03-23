@@ -4,8 +4,9 @@ const url = "https://deezerdevs-deezer.p.rapidapi.com/search";
 
 export const buscarMusicaName = async (name) => {
   try {
+    const nombre = name.split(" ").join("-");
     let options = {
-      params: { q: name },
+      params: { q: nombre },
       headers: {
         "X-RapidAPI-Host": process.env.REACT_APP_RAPI_API_HOST,
         "X-RapidAPI-Key": process.env.REACT_APP_RAPI_API_KEY,
@@ -15,7 +16,7 @@ export const buscarMusicaName = async (name) => {
 
     return data.data;
   } catch (error) {
-    throw error;
+    console.log(error);
   }
 };
 

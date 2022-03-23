@@ -20,14 +20,15 @@ export default function SearchUser() {
         <div className=" flex  ">
           <form onSubmit={submit} className="flex relative  ">
             <input
-              placeholder="Buscar"
+              placeholder="Buscar ejempl: name ,Rosalia, Drake"
               className="w-56 sm:w-640 lg:w-640 h-9 rounded-xl p-1 mt-1 border-2"
               type="text"
+              maxLength={20}
               name="name"
               value={state.name}
               onChange={handleChange}
             />
-            <i className="fa-solid fa-magnifying-glass  absolute right-3 mt-2 text-gray-400 "></i>
+            <i className="fa-solid fa-magnifying-glass  absolute right-3 mt-3 text-gray-400 "></i>
           </form>
         </div>
         <div className="flex mt-2 ">

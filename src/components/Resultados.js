@@ -25,7 +25,6 @@ export default function Resultados({
   };
 
   useEffect(() => {
-    console.log(name);
     getFuncion(name);
   }, [name]);
 

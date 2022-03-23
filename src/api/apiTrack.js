@@ -11,7 +11,7 @@ const config = {
 export const getApiTrack = async (id) => {
   try {
     const { data } = await axios.get(`${url}/${id}`, config);
-    console.log(data);
+
     return data;
   } catch (error) {
     throw error;

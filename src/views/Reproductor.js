@@ -3,11 +3,6 @@ import { getApiTrack } from "../api/apiTrack";
 import { ArtistContext } from "../context/ArtistProvider";
 
 export default function Reproductor() {
-  // const [volumen, setVolumen] = useState();
-  const [value, setValue] = useState({
-    valor: 1,
-  });
-
   const handleChange = (e) => {
     audioPlayer.current.volume = audioRef.current.valueAsNumber;
   };
@@ -94,7 +89,7 @@ export default function Reproductor() {
           onChange={handleChange}
         />
         <span className="absolute top-7 text-white text-xl right-7">
-          <i class="fa-solid fa-music"></i>
+          <i className="fa-solid fa-music"></i>
         </span>
       </div>
     </div>

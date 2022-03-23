@@ -19,6 +19,7 @@ export default function Artist({
     },
     title: "",
     id: 312313,
+    rank: 1,
   });
 
   const name = artistaObtenido();
@@ -28,7 +29,6 @@ export default function Artist({
       let obj = [];
       for (var i = 0; i < 1; i++) {
         obj = data[i];
-        console.log(obj);
       }
       setArtistas(obj);
     } catch (error) {
@@ -66,17 +66,17 @@ export default function Artist({
         <div className=" relative md:mx-auto ">
           <img
             src={artistas.artist.picture_xl}
-            className="object-cover object-center h-[250px] grayscale brightness-50 sepia hue-rotate-[-50deg] saturate-600 contrast-8 "
+            className="object-cover object-top  h-[250px] grayscale brightness-50 sepia hue-rotate-[-50deg] saturate-600 contrast-8 "
             alt={artistas.artist.name}
             width={642}
             height={250}
           />
           <div className="absolute top-0 text-white ml-5 ">
-            <h1 className="text-xl mt-3">{artistas.title}</h1>
+            <h1 className="text-xl font-bold mt-3">{artistas.title}</h1>
             <h3 className="font-extralight">
-              Lo mejor de {artistas.artist.name}{" "}
-              <span className="font-bold text-black ">
-                {artistas.artist.nb_fan}seguidores
+              Lo mejor de {artistas.artist.name}
+              <span className="font-bold mx-2 text-black ">
+                {artistas.rank} rank
               </span>
             </h3>
             <button
