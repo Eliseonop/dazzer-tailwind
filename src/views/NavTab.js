@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import logo from "../assets/Foxbel-Music/foxbel-music.png";
 import logo2 from "../assets/Foxbel-Music/foxbel-music-icon@2x.png";
-export default function NavTab() {
+function NavTab() {
   const [toggleMenu, setToggleMenu] = useState(false);
   // const [css, setCss] = useState("");
 
@@ -13,8 +13,8 @@ export default function NavTab() {
     <div
       className={
         toggleMenu
-          ? " h-[300px]  flex w-screen  items-center content-between bg-dark-Red-s"
-          : "h-[100px] lg:h-[1087px] lg:w-[330px] flex lg:flex-col w-screen items-center content-between bg-dark-Red-s "
+          ? " h-[250px]  flex w-screen  items-center content-center ease-in-out duration-300 bg-dark-Red-s"
+          : "h-[100px] lg:h-[1087px] lg:w-[330px] content-center flex lg:flex-col w-screen ease-in-out duration-300 items-center content-between bg-dark-Red-s "
       }
     >
       <img
@@ -22,7 +22,7 @@ export default function NavTab() {
         alt="logo"
         // width={250}
         // height={59}
-        className="w-20 h-20 ml-5 lg:hidden "
+        className="w-20 h-20 ml-1  lg:hidden "
       />
       <img
         src={logo}
@@ -31,17 +31,17 @@ export default function NavTab() {
         // height={59}
         className=" hidden lg:block  mt-[50px] ml-[40px] mr-[40px] w-[250px] md:w-[200px] "
       />
-      <div className="flex lg:flex-col justify-items-center   items-center lg:items-start ">
+      <div className="flex lg:flex-col justify-items-center    items-center lg:items-start ">
         <div className="mx-3 lg:mt-5 ">
           <h4 className="text-white text-vd font-bold">Mi Libreria</h4>
           <ul
             className={
               toggleMenu
                 ? "flex flex-col"
-                : "hidden lg:flex lg:flex-col lg:space-y-1 lg:mt-2"
+                : "hidden lg:flex lg:flex-col lg:space-y-1 ease-in-out duration-300 lg:mt-2"
             }
           >
-            <li className="list-none text-white">Recientes</li>
+            <li className="list-none text-white ">Recientes</li>
             <li className="list-none text-white">Artistas</li>
             <li className="list-none text-white">Albums</li>
             <li className="list-none text-white">Canciones</li>
@@ -54,7 +54,7 @@ export default function NavTab() {
             className={
               toggleMenu
                 ? "flex flex-col"
-                : "hidden lg:flex lg:flex-col lg:space-y-1 lg:mt-2"
+                : "hidden lg:flex lg:flex-col lg:space-y-1 ease-in-out duration-300 lg:mt-2"
             }
           >
             <li className="list-none text-white">Metal</li>
@@ -75,3 +75,4 @@ export default function NavTab() {
     </div>
   );
 }
+export default React.memo(NavTab);

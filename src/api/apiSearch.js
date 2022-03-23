@@ -14,7 +14,7 @@ export const buscarMusicaName = async (name) => {
     };
     const { data } = await axios.get(url, options);
 
-    return data.data;
+    return data.data ? data.data : data;
   } catch (error) {
     console.log(error);
   }

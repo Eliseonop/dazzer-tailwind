@@ -1,11 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 
-export default function CardMusic({
-  item,
-  enviarId,
-  enviarPlayer,
-  obtenerPlayer,
-}) {
+function CardMusic({ item, enviarId, enviarPlayer, obtenerPlayer }) {
   const [play, setPlay] = useState(true);
   const audioPlay = useRef();
   //obtenemos el valor
@@ -53,3 +48,4 @@ export default function CardMusic({
     </div>
   );
 }
+export default React.memo(CardMusic);

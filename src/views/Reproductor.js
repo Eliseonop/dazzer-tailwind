@@ -3,10 +3,21 @@ import { getApiTrack } from "../api/apiTrack";
 import { ArtistContext } from "../context/ArtistProvider";
 
 export default function Reproductor() {
+  const [volumen, setVolumen] = useState(1);
   const handleChange = (e) => {
-    audioPlayer.current.volume = audioRef.current.valueAsNumber;
+    setVolumen(audioRef.current.valueAsNumber);
   };
-
+  const handleClick = () => {
+    if (volumen === 0) {
+      setVolumen(1);
+      audioPlayer.current.volume = volumen;
+      audioRef.current.valueAsNumber = volumen;
+    } else {
+      setVolumen(0);
+      audioPlayer.current.volume = volumen;
+      audioRef.current.valueAsNumber = volumen;
+    }
+  };
   const [music, setMusic] = useState({
     preview:
       "https://cdns-preview-4.dzcdn.net/stream/c-494e7b0d5433c5225783fcace2fea3c5-3.mp3",
@@ -17,8 +28,6 @@ export default function Reproductor() {
   });
   const audioRef = useRef();
   const audioPlayer = useRef();
-  // console.log(audioPlayer.target.volume);
-  // audioPlayer.target.volume = 0;
 
   const { obtenerId, obtenerPlayer, enviarPlayer } = useContext(ArtistContext);
   const [play, setPlay] = useState(false);
@@ -46,10 +55,14 @@ export default function Reproductor() {
   useEffect(() => {
     getTrack(id);
   }, [id]);
-
+  useEffect(() => {
+    audioPlayer.current.volume = volumen;
+    audioRef.current.valueAsNumber = volumen;
+  }, [volumen]);
   useEffect(() => {
     valor ? audioPlayer.current.play() : audioPlayer.current.pause();
   }, [valor]);
+  // console.log(audioRef.current.valueAsNumber);
   return music ? (
     <div className="fixed h-[100px] bottom-0 z-20  bg-[#EB5757] w-screen ">
       <div className="relative">
@@ -67,7 +80,7 @@ export default function Reproductor() {
         ></audio>
         <button
           onClick={PlayPause}
-          className="absolute top-0 left-1/4 lg:left-1/2  h-[100px] w-[100px] bg-transparent text-white border-none z-10"
+          className="absolute top-0 sm:left-20 md:left-28 lg:left-1/4 xl:left-1/3 h-[100px] w-[100px] bg-transparent text-white border-none z-10"
         >
           {valor ? (
             <i className="fa-solid fa-pause cursor-pointer text-[50px]"></i>
@@ -75,22 +88,29 @@ export default function Reproductor() {
             <i className="fa-solid fa-play cursor-pointer text-[50px]"></i>
           )}
         </button>
-
-        <input
-          // value={value.valor}
-
-          ref={audioRef}
-          type="range"
-          max="1"
-          min="0"
-          step="0.1"
-          name="valumen"
-          className="absolute top-10 right-20 "
-          onChange={handleChange}
-        />
-        <span className="absolute top-7 text-white text-xl right-7">
-          <i className="fa-solid fa-music"></i>
-        </span>
+        <div className="absolute top-8 right-1/4 xl:right-10 ">
+          <input
+            ref={audioRef}
+            type="range"
+            max="1"
+            min="0"
+            step="0.1"
+            valueAsNumber={volumen}
+            name="valumen"
+            className=" w-36 lg:w-90 sm:w-72 md:w-80 xl:w-[28rem] "
+            onChange={handleChange}
+          />
+          <button
+            onClick={handleClick}
+            className=" text-white text-xl right-16  lg:ml-10"
+          >
+            {volumen === 0 ? (
+              <i class="fa-solid fa-volume-xmark"></i>
+            ) : (
+              <i class="fa-solid fa-volume-high"></i>
+            )}
+          </button>
+        </div>
       </div>
     </div>
   ) : (
