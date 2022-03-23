@@ -21,7 +21,7 @@ export default function SearchUser() {
           <form onSubmit={submit}>
             <input
               placeholder="Buscar"
-              className="w-640 rounded-xl p-1"
+              className="w-640 rounded-xl p-1 border-2"
               type="text"
               name="name"
               value={state.name}

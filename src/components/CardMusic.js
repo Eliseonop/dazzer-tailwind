@@ -38,7 +38,7 @@ export default function CardMusic({
       ></audio>
       <button
         onClick={PlayPause}
-        className="absolute h-[100px] w-[100px] bg-transparent border-none z-10"
+        className="absolute h-[100px] text-white w-[100px] bg-transparent border-none z-10"
       >
         {play ? (
           <i class="fa-solid fa-play cursor-pointer text-[50px]"></i>

@@ -12,7 +12,12 @@ export default function Home() {
   return (
     <div className="Home">
       <SearchUser />
-      <Artist />
+      <Artist
+        enviarPlayer={enviarPlayer}
+        artistaObtenido={artistaObtenido}
+        enviarId={enviarId}
+        obtenerPlayer={obtenerPlayer}
+      />
       <Resultados
         enviarPlayer={enviarPlayer}
         artistaObtenido={artistaObtenido}

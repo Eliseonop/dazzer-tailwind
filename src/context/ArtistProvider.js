@@ -1,11 +1,11 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useState } from "react";
 
 export const ArtistContext = createContext();
 
 export default function ArtistProvider({ children }) {
-  const [player, setPlayer] = useState(false);
-  const [artist, setArtist] = useState("eminen");
-  const [id, setId] = useState(737940772);
+  const [player, setPlayer] = useState(true);
+  const [artist, setArtist] = useState("drake");
+  const [id, setId] = useState(1385358692);
   const enviarPlayer = (valor) => {
     setPlayer(valor);
   };
