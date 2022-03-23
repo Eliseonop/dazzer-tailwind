@@ -20,7 +20,7 @@ export default function Artist({
     title: "",
     id: 312313,
   });
-  console.log(artistas);
+
   const name = artistaObtenido();
   const getFuncion = async (nombre) => {
     try {
@@ -35,9 +35,8 @@ export default function Artist({
       throw error;
     }
   };
-  console.log(artistas);
+
   useEffect(() => {
-    console.log(name);
     getFuncion(name);
   }, [name]);
 
@@ -53,9 +52,9 @@ export default function Artist({
           <img src={artistas.artist.picture_medium} alt={artistas.artist.id} />
           <button className="absolute  z-10 h-[100px] w-[100px] bg-transparent text-white border-none ">
             {artistas ? (
-              <i class="fa-solid fa-pause cursor-pointer text-[50px]"></i>
+              <i className="fa-solid fa-pause cursor-pointer text-[50px]"></i>
             ) : (
-              <i class="fa-solid fa-play cursor-pointer text-[50px]"></i>
+              <i className="fa-solid fa-play cursor-pointer text-[50px]"></i>
             )}
           </button>
         </div>

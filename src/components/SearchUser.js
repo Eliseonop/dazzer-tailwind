@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from "react";
+import React, { useState, useContext } from "react";
 import { ArtistContext } from "../context/ArtistProvider";
 
 export default function SearchUser() {
@@ -27,11 +27,11 @@ export default function SearchUser() {
               value={state.name}
               onChange={handleChange}
             />
-            <i class="fa-solid fa-magnifying-glass  relative right-5 mt-1 text-gray-600 "></i>
+            <i className="fa-solid fa-magnifying-glass  relative right-5 mt-1 text-gray-600 "></i>
           </form>
         </div>
         <div className="flex">
-          <i class="fas fa-regular fa-user mt-1 text-red-600"></i>
+          <i className="fas fa-regular fa-user mt-1 text-red-600"></i>
           <h3 className="ml-[10px]">Francisco</h3>
         </div>
       </div>

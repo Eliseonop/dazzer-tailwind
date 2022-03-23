@@ -41,9 +41,9 @@ export default function CardMusic({
         className="absolute h-[100px] text-white w-[100px] bg-transparent border-none z-10"
       >
         {play ? (
-          <i class="fa-solid fa-play cursor-pointer text-[50px]"></i>
+          <i className="fa-solid fa-play cursor-pointer text-[50px]"></i>
         ) : (
-          <i class="fa-solid fa-pause cursor-pointer text-[50px]"></i>
+          <i className="fa-solid fa-pause cursor-pointer text-[50px]"></i>
         )}
       </button>
       <div className="h-[20px]">

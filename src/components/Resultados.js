@@ -23,7 +23,7 @@ export default function Resultados({
       throw error;
     }
   };
-  console.log(artistas);
+
   useEffect(() => {
     console.log(name);
     getFuncion(name);

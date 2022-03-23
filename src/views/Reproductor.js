@@ -25,8 +25,6 @@ export default function Reproductor() {
   // console.log(audioPlayer.target.volume);
   // audioPlayer.target.volume = 0;
 
-  console.log(music);
-  console.log(audioRef);
   const { obtenerId, obtenerPlayer, enviarPlayer } = useContext(ArtistContext);
   const [play, setPlay] = useState(false);
 
@@ -76,9 +74,9 @@ export default function Reproductor() {
         className="absolute top-0 left-1/2  h-[100px] w-[100px] bg-transparent text-white border-none z-10"
       >
         {valor ? (
-          <i class="fa-solid fa-pause cursor-pointer text-[50px]"></i>
+          <i className="fa-solid fa-pause cursor-pointer text-[50px]"></i>
         ) : (
-          <i class="fa-solid fa-play cursor-pointer text-[50px]"></i>
+          <i className="fa-solid fa-play cursor-pointer text-[50px]"></i>
         )}
       </button>
       <span className="absolute top-1/3 right-60">🔊</span>

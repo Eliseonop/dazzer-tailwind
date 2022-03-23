@@ -3,7 +3,6 @@ import axios from "axios";
 const url = "https://deezerdevs-deezer.p.rapidapi.com/search";
 
 export const buscarMusicaName = async (name) => {
-  console.log(name);
   try {
     let options = {
       params: { q: name },
@@ -13,7 +12,7 @@ export const buscarMusicaName = async (name) => {
       },
     };
     const { data } = await axios.get(url, options);
-    console.log(data.data);
+
     return data.data;
   } catch (error) {
     throw error;
