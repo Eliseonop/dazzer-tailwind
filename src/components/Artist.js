@@ -55,13 +55,13 @@ export default function Artist({
             width={250}
             className="lg:w-[250px] lg:h-[250px] "
           />
-          <button className="absolute top-1/3 left-1/3 z-10 h-[100px] w-[100px] bg-transparent text-white border-none ">
+          {/* <button className="absolute top-1/3 left-1/3 z-10 h-[100px] w-[100px] bg-transparent text-white border-none ">
             {artistas ? (
               <i className="fa-solid fa-pause cursor-pointer text-[80px]"></i>
             ) : (
               <i className="fa-solid fa-play cursor-pointer text-[80px]"></i>
             )}
-          </button>
+          </button> */}
         </div>
         <div className=" relative md:mx-auto ">
           <img
