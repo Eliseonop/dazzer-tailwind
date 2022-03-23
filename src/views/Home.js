@@ -10,7 +10,7 @@ export default function Home() {
 
   useEffect(() => {}, []);
   return (
-    <div className="Home">
+    <div className="Home flex flex-col mx-auto">
       <SearchUser />
       <Artist
         enviarPlayer={enviarPlayer}

@@ -9,7 +9,7 @@ import Reproductor from "./views/Reproductor";
 
 function App() {
   return (
-    <div className="grid">
+    <div className="flex">
       <ArtistProvider>
         <NavTab className="g" />
         <Home className="w-full m-auto" />
