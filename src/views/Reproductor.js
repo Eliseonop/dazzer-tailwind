@@ -88,14 +88,14 @@ export default function Reproductor() {
             <i className="fa-solid fa-play cursor-pointer text-[50px]"></i>
           )}
         </button>
-        <div className="absolute top-8 right-1/4 xl:right-10 ">
+        <div className="absolute top-8 right-2 md:right-1/4 lg:right-1/4 sm:right-1/4  xl:right-52 ">
           <input
             ref={audioRef}
             type="range"
             max="1"
             min="0"
             step="0.1"
-            valueAsNumber={volumen}
+            svalueAsNumber={volumen}
             name="valumen"
             className=" w-36 lg:w-90 sm:w-72 md:w-80 xl:w-[28rem] "
             onChange={handleChange}
