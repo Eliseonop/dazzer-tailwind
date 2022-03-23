@@ -3,8 +3,8 @@ const url = "https://deezerdevs-deezer.p.rapidapi.com/track";
 
 const config = {
   headers: {
-    "x-rapidapi-host": "deezerdevs-deezer.p.rapidapi.com",
-    "x-rapidapi-key": "dcfa1cdcfdmsh91fd95a9752ef5bp147594jsneb236564b0b1",
+    "x-rapidapi-host": process.env.RAPI_API_HOST,
+    "x-rapidapi-key": process.env.RAPI_API_KEY,
   },
 };
 

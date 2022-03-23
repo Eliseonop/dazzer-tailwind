@@ -8,8 +8,8 @@ export const buscarMusicaName = async (name) => {
     let options = {
       params: { q: name },
       headers: {
-        "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com",
-        "X-RapidAPI-Key": "dcfa1cdcfdmsh91fd95a9752ef5bp147594jsneb236564b0b1",
+        "X-RapidAPI-Host": process.env.RAPI_API_HOST,
+        "X-RapidAPI-Key": process.env.RAPI_API_KEY,
       },
     };
     const { data } = await axios.get(url, options);
