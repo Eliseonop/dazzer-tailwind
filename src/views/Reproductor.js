@@ -97,7 +97,7 @@ export default function Reproductor() {
             step="0.1"
             svalueAsNumber={volumen}
             name="valumen"
-            className=" w-36 lg:w-90 sm:w-72 md:w-80 xl:w-[28rem] "
+            className=" w-40  lg:w-90 sm:w-72 md:w-80 xl:w-[28rem] "
             onChange={handleChange}
           />
           <button
