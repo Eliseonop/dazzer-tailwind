@@ -11,7 +11,7 @@ function App() {
   return (
     <>
       <ArtistProvider>
-        <div className="flex flex-col w-screen  lg:flex-row">
+        <div className="flex flex-col   lg:flex-row">
           <NavTab />
           <Home />
 
