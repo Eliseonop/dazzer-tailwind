@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+
 import logo from "../assets/Foxbel-Music/foxbel-music.png";
 import logo2 from "../assets/Foxbel-Music/foxbel-music-icon@2x.png";
 function NavTab() {
@@ -14,7 +15,7 @@ function NavTab() {
       className={
         toggleMenu
           ? " h-[250px]  flex w-screen  items-center content-center ease-in-out duration-300 bg-dark-Red-s"
-          : "h-[100px] lg:h-[1087px] lg:w-[330px] content-center flex lg:flex-col w-screen ease-in-out duration-300 items-center content-between bg-dark-Red-s "
+          : "h-[100px] lg:h-[1087px] lg:w-[330px]  flex lg:flex-col w-screen ease-in-out duration-300 items-center content-between bg-dark-Red-s "
       }
     >
       <img

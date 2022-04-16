@@ -1,4 +1,5 @@
 import React, { useEffect, useContext } from "react";
+
 import Artist from "../components/Artist";
 import Resultados from "../components/Resultados";
 import SearchUser from "../components/SearchUser";
