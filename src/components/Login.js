@@ -37,16 +37,16 @@ export default function Login() {
               <i class="ml-1 fill-current text-gray-400 text-xs z-10 fas fa-user"></i>
             </div>
           </div>
-          <div class="w-full mb-2">
+          {/* <div class="w-full mb-2">
             <div class="flex items-center">
               <input
                 type="password"
                 placeholder="Password"
                 class="-mx-6  w-full border rounded px-3 py-2 text-gray-700 focus:outline-none"
               />
-              <i class="ml-1 fill-current text-gray-400 text-xs z-10 fas fa-lock"></i>
+              <i class="ml-1 fill-current text-gray-400 tnext-xs z-10 fas fa-lock"></i>
             </div>
-          </div>
+          </div> */}
 
           <button
             type="submit"
